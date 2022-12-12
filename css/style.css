@@ -1,0 +1,784 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+} 
+nav{
+    background: #d63031;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    height: calc(100vh - 100px);
+}
+li a.active, li a:hover{
+    background: #000090;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color:  #ffff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (min-width: 850px){
+    .header{
+        position: fixed;
+        
+
+    }
+
+    nav .header{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+    nav{
+        position: static;
+        z-index: 100;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+        position: fixed;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0);
+    box-shadow:inset 0 0 10px red ;
+}
+
+.container{
+    max-width: auto;
+    margin: auto;
+} 
+
+.color-acento{ 
+    color:red; 
+}
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("IMG/porta.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#somos-TRENDY .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-productos{
+    background-color:  #d63031;
+    color: white;
+    text-align: center;
+}
+
+#nuestros-productos .container{
+    padding: 150px 12px;
+}
+
+#nuestros-productos h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#nuestros-productos p{
+    display: none;
+}
+
+#nuestros-productos .carta{
+    background-position: center center;
+    background-size: 100% 500px;
+    padding: 50px ;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("IMG/somos.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("IMG/porta.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("IMG/somos.jpg");
+
+}
+
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 850px){
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #somos-TRENDY .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-TRENDY .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos-TRENDY h2{
+        margin-top: 0px;
+    }
+
+    #somos-TRENDY .img-container{
+        background-image: url("IMG/somos.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("IMG/tenis.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("IMG/botas.jpg");
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("IMG/sandalias.jpg");
+
+    }
+    @media(min-width:850px){
+
+        #nuestros-productos .productos{
+               display : flex;
+              justify-content: center;
+              flex-wrap: wrap;/*para poner abjo las cartas cuando ya no caen*/
+             
+        }
+        
+        #nuestros-productos h3{
+        margin-top: 20px;
+     
+        }
+     }
+        
+        #nuestros-productos .carta:first-child{
+     
+        padding: 80px; /*engrandas las cartas */
+        background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgb(176, 179, 167);
+       
+      
+        }
+        #nuestros-productos .carta:nth-child(2){
+        padding: 80px; /*engrandas las cartas */
+        background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgb(176, 179, 167);
+
+        }
+        #nuestros-productos .carta:nth-child(3){
+        padding: 80px; /*engrandas las cartas */
+        background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgb(176, 179, 167);
+
+        }
+
+    
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+.LOGO img{ 
+    height: 78px;
+    margin-right: 15px;
+}
+.LOGO{
+    display: flex;
+    align-items: center;
+    font-size:0.em;
+    }
+    #final{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 90vh;
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("IMG/ultimo.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+#marcas-en-tendencia{
+    background-color:  #d63031;
+    color: white;
+    text-align: center;
+}
+
+#marcas-en-tendencia .contenedor{
+    padding: 150px 12px;
+}
+
+#marcas-en-tendencia h3{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+
+#marcas-en-tendencia .item{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+
+
+.item:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("IMG/cris.jpg");
+}
+.item:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("IMG/jimmi.jpg");
+}
+.item:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("IMG/nike.jpg");
+}
+.item:nth-child(4){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("IMG/adidas.jpg");
+}
+.item:nth-child(5){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+        ,url("IMG/puma.jpg");
+}
+@media(min-width:850px){
+
+    #marcas-en-tendencia .marcas{
+           display : flex;
+          justify-content: center;
+          flex-wrap: wrap;/*para poner abjo las cartas cuando ya no caen*/
+         
+    }
+    
+    #marcas-en-tendencia h3{
+    margin-top: 20px;
+ 
+    }
+ }
+    
+    #marcas-en-tendencia .item:first-child{
+ 
+    padding: 70px; /*engrandas las cartas */
+    background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: #f05656;
+   
+  
+    }
+ 
+    #marcas-en-tendencia .item:nth-child(2){
+ 
+     padding: 80px; /*engrandas las cartas */
+     background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+     background-repeat: no-repeat;
+     background-position-y: 0;
+     background-color: #f05656;
+    }
+    
+    #marcas-en-tendencia .item:nth-child(3){
+ 
+     padding: 80px; /*engrandas las cartas */
+     background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+     background-repeat: no-repeat;
+     background-position-y: 0;
+     background-color:#f05656;
+    }
+    #marcas-en-tendencia .item:nth-child(4){
+ 
+     padding: 80px; /*engrandas las cartas */
+     background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+     background-repeat: no-repeat;
+    background-position-y: 0;
+     background-color: #f05656;
+    }
+ 
+    #marcas-en-tendencia .item:nth-child(5){
+ 
+     padding: 80px; /*engrandas las cartas */
+     background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+     background-repeat: no-repeat;
+     background-position-y: 0;
+     background-color: #f05656;
+    }
+
+#marcas-en-tendencia h3{
+    font-size: 1em;
+    font-weight: bold;
+}
+#categoria h2{
+    margin-top: 0px;
+    font-size: 2.2em;
+    font-weight: bold;   
+}
+
+
+#categoria .cate{
+   
+   background-size: cover;
+   padding: 100px;
+   margin:10px;
+   border-radius: 15px; 
+   
+    
+}
+
+#categoria .contenedor{
+    padding:100px 12px;
+}
+
+#categoria{
+   background-color: rgb(250, 250, 250);/* fondo de la pantalla*/
+   text-align: center; 
+  
+}
+
+#categoria h3{
+   color: rgb(252, 250, 250);
+}
+
+
+
+.cate:first-child{
+   background-image: linear-gradient(
+       0deg,
+       rgba(0,0,0,0.5),
+       rgba(0,0,0,0.5)
+   )
+   ,url("IMG/mujeres.jpg"); 
+}
+
+.cate:nth-child(2){
+   background-image: linear-gradient(
+       0deg,
+       rgba(0,0,0,0.5),
+       rgba(0,0,0,0.5)
+   )
+   ,url("IMG/homb.jpg");   
+}
+
+.cate:nth-child(3){
+   background-image: linear-gradient(
+       0deg,
+       rgba(0,0,0,0.5),
+       rgba(0,0,0,0.5)
+   )
+   ,url("IMG/junior.jpg");  
+}
+
+.cate:nth-child(4){
+   background-image: linear-gradient(
+       0deg,
+       rgba(0,0,0,0.5),
+       rgba(0,0,0,0.5)
+   )
+   ,url("IMG/niños.jpg");
+   
+    
+}
+
+.cate:nth-child(5){
+   background-image: linear-gradient(
+       0deg,
+       rgba(0,0,0,0.5),
+       rgba(0,0,0,0.5)
+   )
+   ,url("IMG/infante.jpg");   
+}
+
+
+@media(min-width:850px){
+
+   #categoria .categoria{
+          display : flex;
+         justify-content: center;
+         flex-wrap: wrap;/*para poner abjo las cartas cuando ya no caen*/
+        
+   }
+   
+   #categoria h3{
+   margin-top: 20px;
+
+   }
+}
+   
+   #categoria .cate:first-child{
+
+   padding: 70px; /*engrandas las cartas */
+   background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+   background-repeat: no-repeat;
+   background-position-y: 0;
+   background-color: rgb(176, 179, 167);
+  
+ 
+   }
+
+   #categoria .cate:nth-child(2){
+
+    padding: 70px; /*engrandas las cartas */
+    background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgb(103, 218, 233);
+}
+   
+#categoria .cate:nth-child(3){
+
+    padding: 70px; /*engrandas las cartas */
+    background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgb(183, 223, 75);
+}
+#categoria .cate:nth-child(4){
+
+    padding: 70px; /*engrandas las cartas */
+    background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+    background-repeat: no-repeat;
+   background-position-y: 0;
+    background-color: rgb(233, 151, 57);
+}
+
+#categoria .cate:nth-child(5){
+
+    padding: 70px; /*engrandas las cartas */
+    background-size: 100% 200px;/* con 100px la imagen se chica y con el 50px los cuadrados grises aumentan*/
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgb(42, 211, 79);
+}
+#categoria h3{
+    color: whitesmoke;
+}
+/* body{
+    background:#181818;
+    color: #fff;
+    line-height: 1.6;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0 1.5em;
+} */
+#contacto .content {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+.logo span {
+    color: #B70E21;
+}
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+.contact-wrapper > *{
+    padding: 1em;
+}
+.contact-form {
+    background: #f7a8a8;
+}
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-form form label {
+    display: block;
+}
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #d63031;
+}
+.contact-form form button {
+    background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+.contact-info {
+    background: #d63031;
+}
+.contact-form h3{
+    color:#B70E21;
+    font-size: 35px;
+    text-align: center;
+}
+.contact-info h4 {
+    font-size: 25px;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+.contact-info p{
+    font-size: 30px;
+}
+@media(min-width: 850px) {
+     
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+
